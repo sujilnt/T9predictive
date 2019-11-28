@@ -1,0 +1,26 @@
+{
+  "name": "phoneword",
+  "version": "1.0.0",
+  "description": "A phoneword app",
+  "main": "main.js",
+  "repository": "https://github.com/sujilnt/T9predictive.git",
+  "author": "Sujil Anto Thomas <Sujilnt@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "webpack": "webpack",
+    "server-prod": "yarn run webpack --env.project=server --env.mode=prod",
+    "server-dev": "yarn run webpack --env.project=server --env.mode=dev"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.0.6",
+    "eslint-loader": "^3.0.2",
+    "nodemon-webpack-plugin": "^4.2.1",
+    "npm-install-webpack-plugin": "^4.0.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "webpack": "^4.41.2"
+  }
+}
