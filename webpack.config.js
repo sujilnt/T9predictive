@@ -25,6 +25,7 @@ module.exports = ({ mode, project } = { mode: "prod", project: "server" }) => {
             entry: path.resolve("./src/server/index.js"),
             target: "node",
             externals: [nodeExternals()],
+            watch: true,
             resolve: {
                 alias: {
                     src: path.resolve(__dirname, "./src/")
@@ -47,6 +48,7 @@ module.exports = ({ mode, project } = { mode: "prod", project: "server" }) => {
         // client side configuration 
         return webPackmerge({
             entry: path.resolve("./src/client/index.js"),
+            watch: true,
             output: {
                 filename: "client.bundle.js",
                 path: path.join(__dirname, "dist"),
