@@ -11,7 +11,7 @@
     "server-prod": "yarn run webpack --env.project=server --env.mode=prod",
     "server-dev": "yarn run webpack --env.project=server --env.mode=dev",
     "eslint-errfix": "eslint --fix",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",

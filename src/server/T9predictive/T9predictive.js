@@ -5,33 +5,24 @@ const phoneNumbertoAlphabets = {
 
 const T9predictive = (text) => {
     let result = [];
-
-    let generateText = (result, phoneNumbertoAlphabetsArray) => {
-        for (let j = 0, len = phoneNumbertoAlphabetsArray.length; j < len; j++) {
-            let firstchar = phoneNumbertoAlphabetsArray[j];
-            console.log("first char", firstchar);
-            if (result.length < 3) {
-                result.push(firstchar);
+    let addText = (result, listofcharacters) => {
+        let generatedTexts = [];
+        for (let i = 0; i < listofcharacters.length; i++) {
+            let character = listofcharacters[i].toLowerCase();
+            if (result.length === 0) {
+                generatedTexts.push(character);  // [A,B,C]
             } else {
-                console.log("else called", result);
-                for (let k = 0; k < result.length; k++) {
-                    let resultchar = result[k];
-                    result.push(resultchar.concat(firstchar));
+                for (let j = 0; j < result.length; j++) {
+                    generatedTexts.push(result[j].toLowerCase().concat(character));
                 }
-
             }
-
         }
-    }
-
+        return generatedTexts;
+    };
     for (let index = 0, len = text.length; index < len; index++) {
         let character = phoneNumbertoAlphabets[text[index]]; // "ABC"
-        generateText(result, character);
-        console.log("inside loop", character);
+        result = addText(result, character);
     };
-
     return result;
 }
 module.exports = T9predictive;
-
-T9predictive("23")
