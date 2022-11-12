@@ -24,7 +24,7 @@
     "jest": "^24.9.0",
     "nodemon-webpack-plugin": "^4.2.1",
     "npm-install-webpack-plugin": "^4.0.5",
-    "webpack-cli": "^3.3.10",
+    "webpack-cli": "^3.3.12",
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2"
   },
